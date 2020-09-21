@@ -14,6 +14,7 @@ namespace FirstProject_N000000.Controllers
         //                          -> "Total = $6.22 CAD"
         public IEnumerable<string> Get(int id)
         {
+            // Calculating the number of fortnights
             double fortnights = id / 14;
             double unroundedFortnightsCost = 5.50 + (5.50 * fortnights);
             double fortnightsCost = unroundedFortnightsCost;
