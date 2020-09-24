@@ -10,9 +10,15 @@ namespace FirstProject_N000000.Controllers
     public class SquareController : ApiController
     {
         // GET api/Square/{id} -> id*2
-        public IEnumerable<int> Get(int id)
+
+        /// <summary>
+        /// This method returns the id squared
+        /// <example>GET api/Square/{id}</example>
+        /// </summary>
+        /// <returns>id * id</returns>
+        public int Get(int id)
         {
-            return new int[] { id * id };
+            return id * id;
         }
 
     }

@@ -10,16 +10,30 @@ namespace FirstProject_N000000.Controllers
     public class GreetingController : ApiController
     {
         // GET api/Greeting/{id} -> "Greetings to {id} people!"
-        public IEnumerable<string> Get(int id)
+
+        /// <summary>
+        /// This method returns a greeting to an amount of people determined by the id
+        /// <example>GET api/Greeting/{id}</example>
+        /// </summary>
+        /// <returns>"Greetings to {id} people!"</returns>
+
+        public string Get(int id)
         {
-            return new string[] { "Greetings to " + id + " people!" };
+            return "Greetings to " + id + " people!" ;
         }
 
 
         // POST api/Greeting -> "Hello World!"
-        public IEnumerable<string> Post([FromBody] string value)
+
+        /// <summary>
+        /// This method returns "Hello World!" when receiving a POST request
+        /// <example> POST api/Greeting </example>
+        /// </summary>
+        /// <returns>"Hello World"</returns>
+
+        public string Post([FromBody] string value)
         {
-            return new string[] { "Hello World!" };
+            return "Hello World!";
         }
     }
 
