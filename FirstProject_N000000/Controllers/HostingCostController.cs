@@ -34,7 +34,11 @@ namespace FirstProject_N000000.Controllers
             // Calculating the total price of the Hosting
             double totalPrice = fortnightsCost + taxRate;
 
-            return new string[] { fortnights + " fortnights at $5.50/FN = $" + stringFortnightsCost + " CAD", "HST 13% = $" + taxRate + " CAD", "Total = $" + totalPrice + " CAD" };
+            return new string[] { 
+                                fortnights + " fortnights at $5.50/FN = $" + stringFortnightsCost + " CAD", 
+                                "HST 13% = $" + taxRate + " CAD", 
+                                "Total = $" + totalPrice + " CAD" 
+                                };
         }
     }
 }
